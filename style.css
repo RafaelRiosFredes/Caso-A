@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    height: 60px;
+    
+}
+.nav a{
+    font-weight: 600;
+    padding-right: 10%;
+}
+    
