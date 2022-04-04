@@ -1,0 +1,11 @@
+body{
+    background:url(fondo.jpg);
+}
+input{
+    background-color: whitesmoke;
+    text-emphasis-color: black;
+}
+textarea{
+    background-color: whitesmoke;
+    text-emphasis-color: black;    
+}
