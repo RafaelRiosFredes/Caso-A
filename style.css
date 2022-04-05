@@ -20,6 +20,11 @@ body {
     padding: 1.5rem;
     font-weight: 700;
 }
+h2{
+font-size:x-large;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-shadow: 1px 5px 5px #000;
+}
 
 body,
 h1,
