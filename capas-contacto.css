@@ -13,9 +13,6 @@ textarea {
     text-emphasis-color: black;
 }
 
-    text-emphasis-color: black;    
-}
-
 .logo {
     display: flex;
 }
@@ -48,5 +45,4 @@ h2 {
     font-size: x-large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 1px 5px 5px #000;
-
 }
