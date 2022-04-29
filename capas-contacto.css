@@ -1,11 +1,47 @@
-body{
-    background:url(fondo.jpg);
+body {
+    background: url(fondo.jpg);
 }
-input{
+
+input {
     background-color: whitesmoke;
     text-emphasis-color: black;
 }
-textarea{
+
+textarea {
     background-color: whitesmoke;
-    text-emphasis-color: black;    
+    text-emphasis-color: black;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 60px;
+}
+
+.btn-outline-success {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline-success:hover {
+    background-color: #ffb01e;
+}
+
+.title-p2 h1 {
+    background-color: #ff8310;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 1px 5px 5px #000;
 }
