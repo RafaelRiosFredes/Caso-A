@@ -9,7 +9,11 @@ input {
 
 textarea {
     background-color: whitesmoke;
+
     text-emphasis-color: black;
+}
+
+    text-emphasis-color: black;    
 }
 
 .logo {
@@ -44,4 +48,5 @@ h2 {
     font-size: x-large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 1px 5px 5px #000;
+
 }
