@@ -1,10 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Producto
 from .forms import ProductoForm
+from rest_framework import viewsets
+from .serializers import ProductoSerializer
 # importar los mensajes
 from django.contrib import messages
 
 # Create your views here.
+class ProductoViewset(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
 
 def index(request):
     return render(request, 'tienda/index.html')

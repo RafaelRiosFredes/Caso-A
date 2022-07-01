@@ -25,6 +25,9 @@ SECRET_KEY = 'django-insecure-i$sy9++i9t07^al=^t$^4io*ikpbsha%s9is-fvj-=e+39hrca
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SOCIAL_AUTH_FACEBOOK_KEY = "866762180961246"
+SOCIAL_AUTH_FACEBOOK_SECRET = "33bbbada1492a7377e2beb5ca975a087"
+
 ALLOWED_HOSTS = []
 
 import mimetypes
@@ -47,6 +50,8 @@ INSTALLED_APPS = [
     "colorfield",
     "django.contrib.humanize",
     'crispy_forms',
+    'rest_framework',
+    'social_django',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -76,9 +81,25 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
+]
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {  
+  'fields': 'id, name, email, picture.type(large), link'
+}
+
+
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [               
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
 ]
 
 WSGI_APPLICATION = 'greenworld.wsgi.application'
@@ -141,3 +162,8 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]

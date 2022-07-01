@@ -1,5 +1,8 @@
-from django.urls import path
-from .views import index, contacto,  tienda, agregar_producto, listar_productos,modificar_producto, eliminar_producto
+from django.urls import path, include
+from .views import index, contacto,  tienda, agregar_producto, listar_productos,modificar_producto, eliminar_producto, ProductoViewset
+from rest_framework import routers
+router = routers.DefaultRouter()
+router.register('producto', ProductoViewset)
 
 urlpatterns = [
     path('', index, name='index'),
@@ -9,4 +12,5 @@ urlpatterns = [
     path('listar-productos/', listar_productos, name='listar_productos'),
     path('modificar-producto/<id>/', modificar_producto, name='modificar_producto'),
     path('eliminar-producto/<id>/', eliminar_producto, name="eliminar_producto"),
+    path('api/', include(router.urls)),
 ]

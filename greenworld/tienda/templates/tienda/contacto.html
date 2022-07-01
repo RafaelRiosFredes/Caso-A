@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
     <main class="container-xl py-5">
         <div class = "titulo text-center my-5">
-            <h2 class = "position-relative d-inline-block">Contactanos</h2>
+            <h2 class = "position-relative d-inline-block">Facebook</h2>
         </div>
     
         <div class="row justify-content-center mt-5">
@@ -15,7 +15,8 @@
 
 
                 <div class="my-5 d-grid d-lg-flex justify-content-lg-center">
-                    <button class="btn-all fw-normal fs-3" type="submit">Enviar</button>
+                    
+                    <a href="{% url 'social:begin' 'facebook' %}">Ingresar con facebook</a>
                 </div>
                
             </form>
